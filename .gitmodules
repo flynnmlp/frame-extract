@@ -1,0 +1,4 @@
+[submodule "dist"]
+	path = dist
+	url = github.com-flynn:flynnmlp/frame-extract.git
+	branch = gh-pages
