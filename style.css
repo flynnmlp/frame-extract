@@ -1,0 +1,80 @@
+button {
+	padding: 0;
+	min-width: 5em;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+body {
+	display: flex;
+	flex-direction: column;
+}
+#input {
+	flex: 0 0 auto;
+	padding: 0.5em 1em;
+	display: flex;
+	align-items: baseline;
+}
+#input > label {
+	margin: 0 1em;
+}
+#file {
+	position: absolute;
+	left: -9999em;
+	top: -9999em;
+}
+#fps {
+	width: 4em;
+}
+progress {
+	flex: 1 1 auto;
+	height: auto;
+}
+#open, progress, #go {
+	align-self: stretch;
+}
+#videocontainer {
+	flex: 1 1 auto;
+	flex-shrink: 1;
+	overflow: hidden;
+	position: relative;
+}
+#video {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#controls {
+	flex: 0 0 auto;
+	display: flex;
+	padding: 0 1em;
+}
+#panelStart, #panelEnd {
+	flex: 1 1 auto;
+	padding: 0.5em 0;
+}
+#controls input[type="range"] {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+#controls span {
+	float: right;
+}
+#filetype {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+#filetype label {
+	display: block;
+	flex: 1;
+	padding: 0 0.5em;
+}
+
