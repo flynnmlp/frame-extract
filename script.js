@@ -30,7 +30,6 @@ let end = $("#end");
 let endFine = $("#endFine");
 let worker = null;
 
-let url;
 let fps = 24;
 
 video.onclick = event => {
@@ -61,8 +60,30 @@ $("#open").onclick = () => {
 $("#file").onchange = event => {
 	if(worker) return;
 	
-	url = URL.createObjectURL(event.target.files[0]);
-	video.src = url;
+	openFile(event.target.files[0]);
+}
+document.body.ondragenter = event => {
+	if(event.preventDefault)
+		event.preventDefault();
+	return false;
+};
+document.body.ondragover = event => {
+	if(event.preventDefault)
+		event.preventDefault();
+	return false;
+};
+document.body.ondrop = event => {
+	if(event.dataTransfer && event.dataTransfer.files)
+		openFile(event.dataTransfer.files[0]);
+	
+	if(event.preventDefault)
+		event.preventDefault();
+	return false;
+};
+function openFile(file) {
+	if(worker) return;
+	
+	video.src = URL.createObjectURL(file);
 };
 
 video.ondurationchange = () => {
@@ -242,10 +263,7 @@ function updateTimes() {
 
 {
 	let file = $("#file").files[0];
-	if(file) {
-		url = URL.createObjectURL(file);
-		video.src = url;
-	}
+	if(file)
+		openFile(file);
 }
-
 

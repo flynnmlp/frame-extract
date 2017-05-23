@@ -10,6 +10,7 @@ html, body {
 	border: 0 none;
 }
 body {
+	background: white;
 	display: flex;
 	flex-direction: column;
 }
@@ -17,10 +18,11 @@ body {
 	flex: 0 0 auto;
 	padding: 0.5em 1em;
 	display: flex;
-	align-items: baseline;
+	align-items: stretch;
 }
 #input > label {
 	margin: 0 1em;
+	align-self: center;
 }
 #file {
 	position: absolute;
@@ -33,9 +35,6 @@ body {
 progress {
 	flex: 1 1 auto;
 	height: auto;
-}
-#open, progress, #go {
-	align-self: stretch;
 }
 #videocontainer {
 	flex: 1 1 auto;
