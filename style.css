@@ -32,6 +32,13 @@ body {
 #fps {
 	width: 4em;
 }
+#framerates {
+	overflow: hidden;
+	width: 15px;
+	min-width: 0;
+	padding: 0;
+	border: 1px solid #b6b6b3;
+}
 progress {
 	flex: 1 1 auto;
 	height: auto;

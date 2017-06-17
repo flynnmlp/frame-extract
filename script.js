@@ -54,6 +54,13 @@ $("#fps").oninput = event => {
 	updateTimes();
 };
 
+var framerates = $("#framerates");
+framerates.onchange = event => {
+	$("#fps").value = framerates.value;
+	framerates.selectedIndex = -1;
+};
+framerates.selectedIndex = -1;
+
 $("#open").onclick = () => {
 	$("#file").click();
 };
